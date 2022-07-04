@@ -1,0 +1,81 @@
+#Nav-container .Nav-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+#Nav-container .Nav-left{
+    display: flex;
+    width:40%;
+    justify-content: space-between;
+    align-items: center;
+}
+#Nav-container .Nav-logo{
+   font-family:'Epilogue', sans-serif;;
+}
+#Nav-container .Nav-tabs{
+    width:80%;
+}
+#Nav-container .Nav-tabs-list{
+  
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+   
+}
+#Nav-container .Nav-Right{
+   width: 20%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;  
+}
+#Nav-container .register{
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding:10px;  
+    color: grey;
+}
+.content-body{
+    padding: 1em;
+    display: flex;
+    margin-top: 30px;
+  
+}
+.content-body h5{
+    font-size: 5rem;
+
+}
+.content-body p{
+    font-size: 18px;
+    width: 80%;
+    text-align: justify;
+    line-height: 1.5;
+}
+.content-right{
+   padding: 100px;
+   position: relative;
+}
+.content-right button{
+    padding: 15px 30px;
+    margin-top: 80px ;
+    color: white;
+    background-color: hsl(0, 0%, 8%);
+    border: none;
+    border-radius: 10px;
+}
+.hero{
+    width: 50%;
+}
+.hero img{
+    width: 100%;
+    height: auto;  
+}
+.clients{
+    position: absolute;
+    bottom: 0px;
+    width: 50%;
+}
+.clients ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
