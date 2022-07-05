@@ -17,6 +17,7 @@ const NavBar = () => {
 const [showfeaturelist,setShowfeaturelist] = useState(false)
 const [showCompanylist,setShowcompanylist] =useState(false)
 const [width, setWidth] = useState(window.innerWidth)
+const [sidebar,setShowshowSideBar] =useState(true)
 
 const updateDimensions = () => {
   setWidth(window.innerWidth);
@@ -67,8 +68,8 @@ useEffect(() => {
             </div>
             <div className='Nav-Right'>
                 <h4 className='login'>Login</h4>
-                {width >= 920 ? (<h4 className='register'>Register</h4>) 
-                :(<FaBars size={25}/>)
+                { width >= 920 ? (<h4 className='register'>Register</h4>) 
+                :(<FaBars size={25} onClick={()=>setShowshowSideBar(<FiTarget/>)}/>)
                 }
             </div>
         </div>

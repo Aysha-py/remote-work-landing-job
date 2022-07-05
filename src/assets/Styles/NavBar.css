@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1em;
+    cursor: pointer;
 
 }
 #Nav-container .Nav-left{
@@ -18,11 +19,13 @@
     position: relative;
 }
 #Nav-container .Nav-tabs-list{
-  
     list-style: none;
     display:flex;
     justify-content: space-between;
-   
+  
+}
+#Nav-container .Nav-tabs-list li:hover{
+    color: grey;
 }
 #Nav-container .featureslist,.company-list{
     list-style: none;
