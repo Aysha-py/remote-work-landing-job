@@ -60,6 +60,7 @@
     color: white;
     background-color: hsl(0, 0%, 8%);
     border: none;
+    width: 150px;
     border-radius: 10px;
 }
 .hero{
@@ -75,14 +76,13 @@
 }
 .clients{
     position: absolute;
-    bottom: 0px;
-    width: 50%;
+    margin-top: 40px;
+    width: 80%;
 }
 .clients ul{
     list-style: none;
-    display: flex;
+    display: flex; 
     justify-content: space-between;
-    padding: 2em;
 }
 @media screen and (max-width: 920px) {
     #Nav-container .Nav-tabs{

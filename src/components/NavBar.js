@@ -1,4 +1,5 @@
 import React from 'react'
+import imageherodesktop from "../assets/images/image-hero-desktop.png"
 import databiz from "../assets/images/client-databiz.svg"
 import audiophile from "../assets/images/client-audiophile.svg"
 import meet from "../assets/images/client-meet.svg"
@@ -39,24 +40,16 @@ const NavBar = () => {
                 </p>
                 <button>Learn More</button>
 
-                
-                
-                
-                
-                
-                
-                
-                
-            </section>
-            <div className='clients'>
-                <ul>
+                <div className='clients'>
+                   <ul>
                     <li><img src={databiz} alt="databiz"/></li>
                     <li><img src={audiophile} alt="audiophile"/></li>
                     <li><img src={meet} alt="meet"/></li>
                     <li><img src={maker} alt="maker"/></li>
-                </ul>
+                   </ul>
                 
-            </div>
+                </div>
+            </section>
 
             <section className='hero'>
                 
