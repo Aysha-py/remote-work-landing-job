@@ -1,5 +1,4 @@
 import React from 'react'
-import imageherodesktop from "../assets/images/image-hero-desktop.png"
 import databiz from "../assets/images/client-databiz.svg"
 import audiophile from "../assets/images/client-audiophile.svg"
 import meet from "../assets/images/client-meet.svg"
@@ -32,7 +31,7 @@ const NavBar = () => {
 
         <div className='content-body'>
             <section className='content-right'>
-                <h5>Make<br/> Remote Work</h5>
+                <h5>Make Remote Work</h5>
 
                 <p>Get your team in sync, No matter the location.
                     Streamline processes, Create team rituals, 
@@ -40,19 +39,27 @@ const NavBar = () => {
                 </p>
                 <button>Learn More</button>
 
-                <div className='clients'>
-                   <ul>
+                
+                
+                
+                
+                
+                
+                
+                
+            </section>
+            <div className='clients'>
+                <ul>
                     <li><img src={databiz} alt="databiz"/></li>
                     <li><img src={audiophile} alt="audiophile"/></li>
                     <li><img src={meet} alt="meet"/></li>
                     <li><img src={maker} alt="maker"/></li>
-                   </ul>
+                </ul>
                 
-                </div>
-            </section>
+            </div>
 
             <section className='hero'>
-                <img src={imageherodesktop} alt='desktopimg'></img>
+                
             </section>
 
 

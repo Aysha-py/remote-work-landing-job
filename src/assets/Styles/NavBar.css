@@ -46,17 +46,17 @@
 }
 .content-body p{
     font-size: 18px;
-    width: 80%;
+    width: fit-content;
     text-align: justify;
     line-height: 1.5;
 }
 .content-right{
-   padding: 100px;
+   padding: 70px;
    position: relative;
 }
 .content-right button{
     padding: 15px 30px;
-    margin-top: 80px ;
+    margin-top: 50px;
     color: white;
     background-color: hsl(0, 0%, 8%);
     border: none;
@@ -64,6 +64,10 @@
 }
 .hero{
     width: 50%;
+    background: url(../images/image-hero-desktop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .hero img{
     width: 100%;
@@ -78,4 +82,59 @@
     list-style: none;
     display: flex;
     justify-content: space-between;
+    padding: 2em;
+}
+@media screen and (max-width: 920px) {
+    #Nav-container .Nav-tabs{
+        display: none;
+    }
+    .content-right button{
+        margin: 50px 100px;
+    }
+    #Nav-container .Nav-Right{
+        display: none;
+    }
+    .content-body{
+        display: flex;
+        padding: 0;
+        margin: auto;
+        flex-direction: column-reverse;
+    }
+    
+    .content-body h5{
+        font-size: 2.4rem;
+        font-weight: 900;
+        text-align: center;
+        padding: 0;
+    }
+    .content-body p{
+        
+        text-align: center;
+    }
+    .content-right{
+        padding: 1em;
+    }
+   
+   
+   
+    .clients{
+        bottom: -70px;
+        width: 100%;
+    }
+    .clients ul{
+        padding: 1em;
+    }
+    .clients img{
+        width: 70px;
+    }
+    .hero{
+        height: 50vh;
+        width: 80%;
+        margin: auto;
+        background-image: url(../images/image-hero-mobile.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
 }
