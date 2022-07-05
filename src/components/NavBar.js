@@ -1,13 +1,34 @@
-import React from 'react'
-import imageherodesktop from "../assets/images/image-hero-desktop.png"
+import React,{useState,useEffect} from 'react'
 import databiz from "../assets/images/client-databiz.svg"
 import audiophile from "../assets/images/client-audiophile.svg"
 import meet from "../assets/images/client-meet.svg"
 import maker from "../assets/images/client-maker.svg"
 import arrowdown from "../assets/images/icon-arrow-down.svg"
+import { FaBars } from "react-icons/fa";
+import { RiTodoFill } from "react-icons/ri";
+import { BsFillCalendarDateFill } from "react-icons/bs";
+import { IoMdNotifications } from "react-icons/io";
+import { FiTarget } from "react-icons/fi";
+
 
 
 const NavBar = () => {
+
+const [showfeaturelist,setShowfeaturelist] = useState(false)
+const [showCompanylist,setShowcompanylist] =useState(false)
+const [width, setWidth] = useState(window.innerWidth)
+
+const updateDimensions = () => {
+  setWidth(window.innerWidth);
+};
+
+useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+
+
   return (
     <div id="Nav-container">
         <div className='Nav-header'>
@@ -17,19 +38,41 @@ const NavBar = () => {
                 </div>
                 <div className='Nav-tabs'>
                     <ul className='Nav-tabs-list'>
-                        <li>Features <img src={arrowdown} alt="arrowdown"/ ></li>
-                        <li>Company <img src={arrowdown} alt="arrowdown"/ ></li>
+                        <li>Features <img src={arrowdown} alt="arrowdown" onMouseOver={()=>setShowfeaturelist(!showfeaturelist)}/ >
+                        {showfeaturelist &&
+                            <ul className='featureslist'>
+                                <li><RiTodoFill size={12} style={{marginRight:5, color:"purple"}}/>To do List</li>
+                                <li> <BsFillCalendarDateFill size={12}  style={{marginRight:5, color:"green"}}/>Calendars</li>
+                                <li><IoMdNotifications size={15}  style={{marginRight:5, color:"yellow"}}/>Reminder</li>
+                                <li><FiTarget size={15}  style={{marginRight:5, color:"blue"}}/>Planning</li>
+                            </ul>
+                        }
+                        </li>
+                        
+                        <li>Company <img src={arrowdown} alt="arrowdown" onMouseOver={()=>setShowcompanylist(!showCompanylist)}/ >
+                        {
+                            showCompanylist &&  
+                            <ul className='company-list'>
+                                <li>History</li>
+                                <li>Our team</li>
+                                <li>Blog</li>
+                            
+                            </ul>
+                        }
+                        </li>
                         <li>Careers</li>
                         <li>About</li>  
                     </ul>
                 </div>
             </div>
             <div className='Nav-Right'>
-                <h4>Login</h4>
-                <h4 className='register'>Register</h4> 
+                <h4 className='login'>Login</h4>
+                {width >= 920 ? (<h4 className='register'>Register</h4>) 
+                :(<FaBars size={25}/>)
+                }
             </div>
         </div>
-
+        
         <div className='content-body'>
             <section className='content-right'>
                 <h5>Make Remote Work</h5>
