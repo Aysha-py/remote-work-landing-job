@@ -157,5 +157,8 @@
         background-repeat: no-repeat;
         background-size: contain;
     }
+    .sidebar{
+        background-color: yellow;
+    }
     
 }

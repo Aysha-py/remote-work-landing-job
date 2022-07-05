@@ -9,6 +9,7 @@ import { RiTodoFill } from "react-icons/ri";
 import { BsFillCalendarDateFill } from "react-icons/bs";
 import { IoMdNotifications } from "react-icons/io";
 import { FiTarget } from "react-icons/fi";
+import Sidebar from './Sidebar'
 
 
 
@@ -68,8 +69,13 @@ useEffect(() => {
             </div>
             <div className='Nav-Right'>
                 <h4 className='login'>Login</h4>
-                { width >= 920 ? (<h4 className='register'>Register</h4>) 
-                :(<FaBars size={25} onClick={()=>setShowshowSideBar(<FiTarget/>)}/>)
+                {sidebar && width >= 920 ? (<h4 className='register'>Register</h4>) 
+                :(<div><FaBars size={25} />
+                        <div className='sidebar'>
+                            <Sidebar showfeaturelist={showfeaturelist} setShowfeaturelist={setShowfeaturelist} 
+                            showCompanylist={showCompanylist} setShowcompanylist={setShowcompanylist}/>
+                        </div>
+                </div>)
                 }
             </div>
         </div>
