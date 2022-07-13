@@ -3,13 +3,15 @@ import databiz from "../assets/images/client-databiz.svg"
 import audiophile from "../assets/images/client-audiophile.svg"
 import meet from "../assets/images/client-meet.svg"
 import maker from "../assets/images/client-maker.svg"
-import arrowdown from "../assets/images/icon-arrow-down.svg"
-import { FaBars } from "react-icons/fa";
+import downarrow from "../assets/images/icon-arrow-down.svg"
+import uparrow from "../assets/images/icon-arrow-up.svg"
+import {  FaBars } from "react-icons/fa";
 import { RiTodoFill } from "react-icons/ri";
 import { BsFillCalendarDateFill } from "react-icons/bs";
 import { IoMdNotifications } from "react-icons/io";
 import { FiTarget } from "react-icons/fi";
 import Sidebar from './Sidebar'
+import {AiOutlineClose} from  "react-icons/ai";
 
 
 
@@ -18,7 +20,10 @@ const NavBar = () => {
 const [showfeaturelist,setShowfeaturelist] = useState(false)
 const [showCompanylist,setShowcompanylist] =useState(false)
 const [width, setWidth] = useState(window.innerWidth)
-const [sidebar,setShowshowSideBar] =useState(true)
+const [arrowdown,setArrowDown] =useState(false)
+const [arrowdownsecond,setArrowDownsecond] =useState(false)
+const [show,setShow] = useState(false)
+
 
 const updateDimensions = () => {
   setWidth(window.innerWidth);
@@ -29,6 +34,32 @@ useEffect(() => {
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
+ const handleclick = () =>{
+    if (!show) {
+        setShow(true)
+      } else {
+        setShow(!show)   
+      }
+ }
+ const handlearrow = () =>{
+    if (!arrowdown) {
+        setArrowDown(true)
+        setShowfeaturelist(!showfeaturelist)
+      } else {
+        setArrowDown(!arrowdown)   
+        
+      }
+ }
+
+ const handlearrowsecond = () =>{
+    if (!arrowdownsecond) {
+        setArrowDownsecond(true)
+        setShowcompanylist(!showCompanylist)
+      } else {
+        setArrowDownsecond(!arrowdownsecond)   
+        
+      }
+ }
 
 
   return (
@@ -39,8 +70,8 @@ useEffect(() => {
                     <h1>snap</h1>
                 </div>
                 <div className='Nav-tabs'>
-                    <ul className='Nav-tabs-list'>
-                        <li>Features <img src={arrowdown} alt="arrowdown" onMouseOver={()=>setShowfeaturelist(!showfeaturelist)}/ >
+                    <ul className='Nav-tabs-list' >
+                        <li onClick={handlearrow}> Features { arrowdown ? <img src={uparrow} alt="uparrow" /> :  <img src={downarrow} alt="downarrow" />}
                         {showfeaturelist &&
                             <ul className='featureslist'>
                                 <li><RiTodoFill size={12} style={{marginRight:5, color:"purple"}}/>To do List</li>
@@ -51,7 +82,7 @@ useEffect(() => {
                         }
                         </li>
                         
-                        <li>Company <img src={arrowdown} alt="arrowdown" onMouseOver={()=>setShowcompanylist(!showCompanylist)}/ >
+                        <li onClick={handlearrowsecond}> Company { arrowdownsecond ? <img src={uparrow} alt="uparrow" /> :  <img src={downarrow} alt="downarrow" />}
                         {
                             showCompanylist &&  
                             <ul className='company-list'>
@@ -69,13 +100,24 @@ useEffect(() => {
             </div>
             <div className='Nav-Right'>
                 <h4 className='login'>Login</h4>
-                {sidebar && width >= 920 ? (<h4 className='register'>Register</h4>) 
-                :(<div><FaBars size={25} />
-                        <div className='sidebar'>
-                            <Sidebar showfeaturelist={showfeaturelist} setShowfeaturelist={setShowfeaturelist} 
-                            showCompanylist={showCompanylist} setShowcompanylist={setShowcompanylist}/>
+                {width >= 920 ? (<h4 className='register'>Register</h4>) 
+                : 
+                <div className='sidebar-bars' onClick={handleclick}>    
+                    { show ? 
+                    <>
+                        <AiOutlineClose size={25} style={{marginLeft:"70px"}}/>
+                            <div className='sidebar' >
+                                <Sidebar showfeaturelist={showfeaturelist} setShowfeaturelist={setShowfeaturelist} 
+                                showCompanylist={showCompanylist} setShowcompanylist={setShowcompanylist}/>
+                            </div>
+                        <div className='aside' >
+                           
                         </div>
-                </div>)
+
+                    </>
+                    :<FaBars size={25}/>
+                    }
+                </div>
                 }
             </div>
         </div>
@@ -92,10 +134,10 @@ useEffect(() => {
 
                 <div className='clients'>
                    <ul>
-                    <li><img src={databiz} alt="databiz"/></li>
-                    <li><img src={audiophile} alt="audiophile"/></li>
-                    <li><img src={meet} alt="meet"/></li>
-                    <li><img src={maker} alt="maker"/></li>
+                        <li><img src={databiz} alt="databiz"/></li>
+                        <li><img src={audiophile} alt="audiophile"/></li>
+                        <li><img src={meet} alt="meet"/></li>
+                        <li><img src={maker} alt="maker"/></li>
                    </ul>
                 
                 </div>

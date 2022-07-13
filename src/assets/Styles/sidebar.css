@@ -1,0 +1,36 @@
+.sidebar-nav{
+border: 1px solid;
+position: absolute;
+top: 0;
+left: -30%;
+
+
+}
+.sidebar-nav ul{
+    list-style: none; 
+    text-align: center;
+    background-color: white;
+}
+.sidebar-footer{
+    text-align: center;
+    background-color: white;
+    font-size: 1.3rem;
+    padding: 20px;
+    background-color: white;
+
+}
+.sidebar-register{
+    margin-top: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+.sidebar-navlist-list{
+    background-color: white;
+    margin-top: 50px;
+
+}
+.sidebar-navlist-list li{
+    font-size: 1.3rem;
+    margin-top: 40px;
+}

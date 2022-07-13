@@ -111,6 +111,9 @@
     #Nav-container .Nav-tabs{
         display: none;
     }
+    #Nav-container .Nav-left{
+        align-items: flex-start;
+    }
     .content-right button{
         margin: 50px 100px;
     }
@@ -122,6 +125,7 @@
         padding: 0;
         margin: auto;
         flex-direction: column-reverse;
+    
     }
     
     .content-body h5{
@@ -141,12 +145,15 @@
     .clients{
         bottom: -70px;
         width: 100%;
+        
     }
     .clients ul{
         padding: 1em;
+       
     }
     .clients img{
         width: 70px;
+       
     }
     .hero{
         height: 50vh;
@@ -157,8 +164,9 @@
         background-repeat: no-repeat;
         background-size: contain;
     }
-    .sidebar{
-        background-color: yellow;
+    .sidebar-bars{
+        position: relative;
+
     }
-    
+  
 }
