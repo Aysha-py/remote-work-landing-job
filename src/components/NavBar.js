@@ -145,9 +145,9 @@ useEffect(() => {
                 </div>
             </section>
 
-            <section className='hero'>
+            <div className='hero'>
                 
-            </section>
+            </div>
 
 
         </div>
