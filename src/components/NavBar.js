@@ -44,9 +44,11 @@ useEffect(() => {
  const handlearrow = () =>{
     if (!arrowdown) {
         setArrowDown(true)
-        setShowfeaturelist(!showfeaturelist)
+        setShowfeaturelist(true)
+        
       } else {
         setArrowDown(!arrowdown)   
+        setShowfeaturelist(!showfeaturelist)
         
       }
  }
@@ -54,9 +56,10 @@ useEffect(() => {
  const handlearrowsecond = () =>{
     if (!arrowdownsecond) {
         setArrowDownsecond(true)
-        setShowcompanylist(!showCompanylist)
+        setShowcompanylist(true)
       } else {
         setArrowDownsecond(!arrowdownsecond)   
+        setShowcompanylist(!showCompanylist)
         
       }
  }

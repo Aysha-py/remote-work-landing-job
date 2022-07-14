@@ -166,7 +166,12 @@
     }
     .sidebar-bars{
         position: relative;
-
+        z-index: 1;
+      
+   
+      background-color: #fff;
+      color: black;
+      width: 100px;
     }
   
 }
