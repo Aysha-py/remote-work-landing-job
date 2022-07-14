@@ -21,6 +21,8 @@ const [showfeaturelist,setShowfeaturelist] = useState(false)
 const [showCompanylist,setShowcompanylist] =useState(false)
 const [width, setWidth] = useState(window.innerWidth)
 const [arrowdown,setArrowDown] =useState(false)
+// const [mobilearrowdown,setmobileArrowDown] =useState(false)
+// const [secondmobilearrowdown,setsecondmobileArrowDown] =useState(false)
 const [arrowdownsecond,setArrowDownsecond] =useState(false)
 const [show,setShow] = useState(false)
 
@@ -45,6 +47,7 @@ useEffect(() => {
     if (!arrowdown) {
         setArrowDown(true)
         setShowfeaturelist(true)
+        
         
       } else {
         setArrowDown(!arrowdown)   
@@ -113,10 +116,6 @@ useEffect(() => {
                                 <Sidebar showfeaturelist={showfeaturelist} setShowfeaturelist={setShowfeaturelist} 
                                 showCompanylist={showCompanylist} setShowcompanylist={setShowcompanylist}/>
                             </div>
-                        <div className='aside' >
-                           
-                        </div>
-
                     </>
                     :<FaBars size={25}/>
                     }
