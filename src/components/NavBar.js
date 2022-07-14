@@ -105,8 +105,8 @@ useEffect(() => {
                 </div>
             </div>
             <div className='Nav-Right'>
-                <h4 className='login'>Login</h4>
-                {width >= 920 ? (<h4 className='register'>Register</h4>) 
+                <h2 className='login'>Login</h2>
+                {width >= 920 ? (<h3 className='register'>Register</h3>) 
                 : 
                 <div className='sidebar-bars' onClick={handleclick}>    
                     { show ? 
@@ -126,7 +126,7 @@ useEffect(() => {
         
         <div className='content-body'>
             <section className='content-right'>
-                <h5>Make Remote Work</h5>
+                <h4>Make Remote Work</h4>
 
                 <p>Get your team in sync, No matter the location.
                     Streamline processes, Create team rituals, 
