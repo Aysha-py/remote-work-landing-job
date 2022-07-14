@@ -70,6 +70,7 @@ useEffect(() => {
 
   return (
     <div id="Nav-container">
+    <main>
         <div className='Nav-header'>
             <div className='Nav-left'>
                 <div className='Nav-logo'>
@@ -151,6 +152,7 @@ useEffect(() => {
 
 
         </div>
+        </main>
     </div>
   )
 }
